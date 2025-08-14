@@ -1,0 +1,15 @@
+# Requirements for TensorFlow-Keras CNN projects
+# Pinning versions to ensure GPU compatibility with TensorFlow 2.15.0
+
+tensorflow==2.15.0
+keras==2.15.0
+scikit-learn
+opencv-python
+pandas
+matplotlib
+Pillow
+seaborn
+visualkeras
+jupyterlab
+h5py
+

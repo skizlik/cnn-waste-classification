@@ -1,0 +1,33 @@
+# Python Caches and Bytecode
+__pycache__/
+*.pyc
+
+# Virtual Environments
+venv/
+*.venv
+env/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Local Development & Archives
+# --- Your new rules ---
+_archive/
+_sandbox/
+
+# Generated Outputs & Large Data Files
+# --- Your new rules ---
+outputs/
+data/*.pkl
+data/RealWaste/
+
+# OS-specific Files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor Directories
+.idea/
+.vscode/
+
+# Local Environment Variables
+.env

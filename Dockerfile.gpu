@@ -1,0 +1,18 @@
+FROM tensorflow/tensorflow:latest-gpu-jupyter
+
+ARG USER_ID
+ARG GROUP_ID
+
+RUN groupadd -g ${GROUP_ID} appuser && useradd -u ${USER_ID} -g ${GROUP_ID} -m appuser
+RUN adduser appuser sudo
+
+USER appuser
+
+WORKDIR /home/appuser/project
+
+COPY --chown=appuser:appuser requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY --chown=appuser:appuser . .
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--NotebookApp.token=''"]
