@@ -44,8 +44,8 @@ This project is fully containerized and managed with shell scripts for a streaml
 
 1.  Clone the repository:
     ```bash
-    git clone [your-repo-url]
-    cd [your-repo-name]
+    git clone https://github.com/skizlik/cnn-waste-classification.git
+    cd cnn-waste-classification
     ```
 
 2.  Make the scripts executable:
