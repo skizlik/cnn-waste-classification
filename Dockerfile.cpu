@@ -12,6 +12,9 @@ USER appuser
 # Set the working directory inside the container
 WORKDIR /home/appuser/project
 
+# Add the user's local bin directory to the PATH environment variable.
+ENV PATH="/home/appuser/.local/bin:${PATH}"
+
 # Copy and install the CPU-specific requirements
 COPY --chown=appuser:appuser requirements.cpu.txt .
 RUN pip install --no-cache-dir -r requirements.cpu.txt
