@@ -20,7 +20,7 @@ The analysis is structured across a series of notebooks:
 
 * **Developed a High-Performing Custom CNN:** A custom-built CNN, developed from scratch, achieved an impressive **58.7% validation accuracy**, establishing a strong performance baseline and demonstrating the viability of non-transfer learning approaches.
 
-* **Conducted a Deep Dive into Model Failure:** A key insight from this project was the identification of a common "model collapse" failure mode. A follow-on investigation proved this was a function of a sub-optimal learning rate, and a more methodical tuning process successfully turned previously "failed" architectures into viable, high-performing models.
+* **Conducted a Deep Dive into Model Failure:** A key insight from this project was the identification of a common "model collapse" failure mode. A follow-on investigation proved this was a result of a sub-optimal default learning rate; tuning the learning rate through simple interpolation successfully turned previously "failed" architectures into reasonably viable models.
 
 * **Provided a Complete, Reproducible Environment:** This entire project is containerized using Docker, with separate, optimized environments for both GPU and CPU execution to ensure 100% reproducibility.
 
@@ -74,3 +74,13 @@ This project is fully containerized and managed with shell scripts for a streaml
         ```
 
 After running the container, navigate to `http://localhost:8888` in your web browser to access the Jupyter Lab environment.
+
+---
+
+
+**Data Source**
+
+Data for this project are from the RealWaste dataset at the UC Irvine Machine Learning Repository: (https://archive.ics.uci.edu/dataset/908/realwaste)
+
+Create a folder in your root project directory called data/ - unzip the RealWaste directory inside it.  RealWaste will contain subdirectories for each image category.  Notebooks are configured for this directory structure.
+
